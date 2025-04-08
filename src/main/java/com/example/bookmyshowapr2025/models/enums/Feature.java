@@ -1,2 +1,8 @@
-package com.example.bookmyshowapr2025.models;public enum Feature {
+package com.example.bookmyshowapr2025.models.enums;
+
+public enum Feature {
+    THREE_D,
+    TWO_D,
+    IMAX,
+    DOLBY_ATMOS,
 }

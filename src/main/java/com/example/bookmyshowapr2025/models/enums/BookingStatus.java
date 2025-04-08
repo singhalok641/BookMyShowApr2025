@@ -1,2 +1,7 @@
-package com.example.bookmyshowapr2025.models;public enum BookingStatus {
+package com.example.bookmyshowapr2025.models.enums;
+
+public enum BookingStatus {
+    PENDING,
+    CONFIRMED,
+    CANCELLED,
 }
