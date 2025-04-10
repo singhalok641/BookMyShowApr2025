@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="seats")
 public class Seat extends BaseModel{
     private String seatNumber;
     private int rowVal;

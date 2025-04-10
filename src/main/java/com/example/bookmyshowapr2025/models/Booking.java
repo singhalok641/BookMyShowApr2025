@@ -1,9 +1,7 @@
 package com.example.bookmyshowapr2025.models;
 
 import com.example.bookmyshowapr2025.models.enums.BookingStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,11 +10,14 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "bookings")
 public class Booking extends BaseModel{
     @ManyToOne
     private User user;
+
+    @Enumerated(EnumType.ORDINAL)
     private BookingStatus bookingStatus;
+
     private double amount;
 
     @OneToMany
