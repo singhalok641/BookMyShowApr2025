@@ -21,6 +21,11 @@ public class ShowSeat extends BaseModel{
     private ShowSeatStatus showSeatStatus;
 }
 
+/*
+123 -> 1 - showseat1 -> 1
+123 -> 2 - showseat2 -> 5
+123 -> 3 - showseat3 -> 4
+ */
 
 /*
 ShowSeat ------ Show => M:1

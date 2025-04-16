@@ -4,6 +4,8 @@ package com.example.bookmyshowapr2025.controllers;
 import com.example.bookmyshowapr2025.dtos.CreateBookingRequestDto;
 import com.example.bookmyshowapr2025.dtos.CreateBookingResponseDto;
 import com.example.bookmyshowapr2025.dtos.ResponseStatus;
+import com.example.bookmyshowapr2025.exceptions.ShowSeatNotAvailableException;
+import com.example.bookmyshowapr2025.exceptions.UserNotFoundException;
 import com.example.bookmyshowapr2025.models.Booking;
 import com.example.bookmyshowapr2025.models.ShowSeat;
 import com.example.bookmyshowapr2025.models.User;
@@ -26,7 +28,7 @@ public class BookingController {
     }
 
     @PostMapping
-    public CreateBookingResponseDto createBooking(@RequestBody CreateBookingRequestDto requestDto) {
+    public CreateBookingResponseDto createBooking(@RequestBody CreateBookingRequestDto requestDto) throws UserNotFoundException, ShowSeatNotAvailableException {
         CreateBookingResponseDto responseDto = new CreateBookingResponseDto();
 
         Booking booking = null;
